@@ -13,6 +13,8 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation("org.json:json:20240303")
     implementation("redis.clients:jedis:7.2.0")
+    implementation("com.akuleshov7:ktoml-core:0.5.1")
+    implementation("com.akuleshov7:ktoml-file:0.5.1")
 }
 
 kotlin {
