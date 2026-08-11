@@ -10,5 +10,5 @@ fun Logger (message: String, level: String = "INFO"){
     val logFile = createDirectory("./logs", "$timestamp.log")
     val logEntry = "[$timestamp] [$level] $message\n"
     logFile.appendText(logEntry)
-
+    println(logEntry)
 }
