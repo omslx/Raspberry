@@ -1,4 +1,4 @@
-package ir.nayragames.Config
+package config
 
 import ir.nayragames.Managers.ConfigManager.configFile
 

@@ -1,5 +1,4 @@
-package ir.nayragames.Config
-
+package config
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

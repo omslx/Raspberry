@@ -1,8 +1,8 @@
 package ir.nayragames.Managers
 
 import com.akuleshov7.ktoml.Toml
-import ir.nayragames.Config.AppConfig
-import ir.nayragames.Config.saveDefaultConfig
+import config.AppConfig
+import config.saveDefaultConfig
 import ir.nayragames.Utils.Logger
 import ir.nayragames.Utils.createDirectory
 import kotlinx.serialization.decodeFromString
