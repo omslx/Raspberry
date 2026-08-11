@@ -3,7 +3,6 @@ package ir.nayragames.Config
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import java.awt.Color
 
 @Serializable
 data class AppConfig(
@@ -31,7 +30,7 @@ data class DiscordConfig(
     @SerialName("discord_Token")
     val discordToken: String = "put your bot token here",
 
-    @SerialName("discord_guild")
+    @SerialName("discord_guildID")
     val guildID: String = "put your guild id here",
 
     @SerialName("discord_description")

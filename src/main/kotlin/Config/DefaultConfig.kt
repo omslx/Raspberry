@@ -12,6 +12,14 @@ fun saveDefaultConfig() {
             
             [paths]
             versions_dir = "./versions"
+            
+            [discord]
+            discord_Token = "put your bot token here"
+            discord_title = "Alert"
+            discord_color = 0xeb34b7
+            discord_guildID = "put your guild id here"
+            discord_description = <nil>
+            
         """.trimIndent()
 
     configFile.writeText(defaultConfigText)
