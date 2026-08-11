@@ -23,14 +23,14 @@ object PaperUtils {
         val response = client.send(request, HttpResponse.BodyHandlers.ofString())
 
         if (response.statusCode() != 200) {
-            error("Failed to fetch JSON: HTTP ${response.statusCode()}")
+            Logger("Failed to fetch JSON: HTTP ${response.statusCode()}", error = true)
         }
 
         val jsonObject = JSONObject(response.body())
         val versionsJson = jsonObject.getJSONObject("versions")
 
         if (!versionsJson.has(version)) {
-            error("The JSON file does not contain the version: $version")
+            Logger("The JSON file does not contain the version: $version", error = true)
         }
 
         val downloadURL = versionsJson.getString(version)
@@ -46,7 +46,7 @@ object PaperUtils {
         val response = client.send(request, HttpResponse.BodyHandlers.ofInputStream())
 
         if (response.statusCode() != 200) {
-            error("Failed to download file: HTTP ${response.statusCode()}")
+            Logger("Failed to download file: HTTP ${response.statusCode()}", error = true)
         }
 
         val outputFile = createDirectory(versionsDir, "$name.jar")

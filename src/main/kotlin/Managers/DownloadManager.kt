@@ -29,17 +29,14 @@ fun downloadManager() {
         val versionFile = createDirectory(versionsDir, "$version.jar")
 
         if (versionFile.exists()) {
-            Logger("version $version already exists in $versionsDir")
+            Logger("version $version already exists in $versionsDir!", error = false)
         } else {
-            Logger("version $version not found, now downloading to $versionsDir...")
-            println("version $version not found, now downloading to $versionsDir...")
+            Logger("version $version not found, now downloading to $versionsDir...",error = false)
             try {
                 PaperUtils.getter(version, versionsDir)
-                Logger("version $version downloaded successfully.")
-                println("version $version downloaded successfully.")
+                Logger("version $version downloaded successfully.",error = false)
             } catch (e: Exception) {
-                Logger("Failed to download version $version: ${e.message}")
-                println("Failed to download version $version: ${e.message}")
+                Logger("Failed to download version $version: ${e.message}",error = true)
             }
         }
     }

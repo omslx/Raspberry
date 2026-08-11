@@ -33,7 +33,7 @@ object ConfigManager {
 
     fun loadConfig(): AppConfig {
         if (!configFile.exists()) {
-            Logger("config.toml not found. Creating default file...")
+            Logger("config.toml not found. Creating default file...", error = true)
             saveDefaultConfig()
             return AppConfig()
         }
@@ -41,7 +41,7 @@ object ConfigManager {
         return try {
             Toml.decodeFromString<AppConfig>(configFile.readText())
         } catch (e: Exception) {
-            Logger("Error reading config, using default settings: ${e.message}")
+            Logger("Error reading config, using default settings: ${e.message}", error = true)
             AppConfig()
         }
     }
