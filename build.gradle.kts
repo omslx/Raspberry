@@ -15,6 +15,7 @@ dependencies {
     implementation("redis.clients:jedis:7.2.0")
     implementation("com.akuleshov7:ktoml-core:0.5.1")
     implementation("com.akuleshov7:ktoml-file:0.5.1")
+    implementation("net.dv8tion:JDA:5.0.0-beta.20")
 }
 
 kotlin {
