@@ -1,8 +1,8 @@
 package ir.nayragames.Discord
 
 import ir.nayragames.Managers.ConfigManager
-import ir.nayragames.Utils.Logger
 import ir.nayragames.Utils.Stats
+import ir.nayragames.Utils.logger
 import net.dv8tion.jda.api.EmbedBuilder
 import net.dv8tion.jda.api.JDABuilder
 import java.awt.Color
@@ -39,7 +39,7 @@ fun alert(
         if (channel != null) {
             channel.sendMessageEmbeds(embed).complete()
         } else {
-            Logger("Channel not found with ID: $channelId", error = true)
+            logger("Channel not found with ID: $channelId", error = true)
         }
 
         jda.shutdown()

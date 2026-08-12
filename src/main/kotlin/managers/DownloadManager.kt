@@ -1,13 +1,13 @@
 package ir.nayragames.Managers
 
-import ir.nayragames.Utils.Logger
 import ir.nayragames.Utils.PaperUtils
 import ir.nayragames.Utils.createDirectory
+import ir.nayragames.Utils.logger
+import org.json.JSONObject
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
-import org.json.JSONObject
 
 fun downloadManager() {
     val config = ConfigManager.loadConfig()
@@ -28,14 +28,14 @@ fun downloadManager() {
         val versionFile = createDirectory(versionsDir, "$version.jar")
 
         if (versionFile.exists()) {
-            Logger("version $version already exists in $versionsDir!", error = false)
+            logger("version $version already exists in $versionsDir!", error = false)
         } else {
-            Logger("version $version not found, now downloading to $versionsDir...",error = false)
+            logger("version $version not found, now downloading to $versionsDir...",error = false)
             try {
                 PaperUtils.getter(version, versionsDir)
-                Logger("version $version downloaded successfully.",error = false)
+                logger("version $version downloaded successfully.",error = false)
             } catch (e: Exception) {
-                Logger("Failed to download version $version: ${e.message}",error = true)
+                logger("Failed to download version $version: ${e.message}",error = true)
             }
         }
     }

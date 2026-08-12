@@ -3,8 +3,8 @@ package ir.nayragames.Managers
 import com.akuleshov7.ktoml.Toml
 import config.AppConfig
 import config.saveDefaultConfig
-import ir.nayragames.Utils.Logger
 import ir.nayragames.Utils.createDirectory
+import ir.nayragames.Utils.logger
 import kotlinx.serialization.decodeFromString
 
 object ConfigManager {
@@ -12,7 +12,7 @@ object ConfigManager {
 
     fun loadConfig(): AppConfig {
         if (!configFile.exists()) {
-            Logger("config.toml not found. Creating default file...", error = true)
+            logger("config.toml not found. Creating default file...", error = true)
             saveDefaultConfig()
             return AppConfig()
         }
@@ -20,7 +20,7 @@ object ConfigManager {
         return try {
             Toml.decodeFromString<AppConfig>(configFile.readText())
         } catch (e: Exception) {
-            Logger("Error reading config, using default settings: ${e.message}", error = true)
+            logger("Error reading config, using default settings: ${e.message}", error = true)
             AppConfig()
         }
     }
