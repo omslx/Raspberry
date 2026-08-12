@@ -14,11 +14,16 @@ fun saveDefaultConfig() {
             versions_dir = "./versions"
             
             [discord]
-            discord_Token = "put your bot token here"
-            discord_title = "Alert"
-            discord_color = 0xeb34b7
-            discord_guildID = "put your guild id here"
-            discord_description = <nil>
+            token = "put your bot token here"
+            title = "Alert"
+            color = 0xeb34b7
+            guildID = "put your guild id here"
+            description = <nil>
+            
+            [redis]
+            address = "localhost"
+            port = "6379"
+    ##        password = ""  // not work rn
             
         """.trimIndent()
 

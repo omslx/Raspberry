@@ -7,7 +7,8 @@ import kotlinx.serialization.Serializable
 data class AppConfig(
     val download: DownloadConfig = DownloadConfig(),
     val paths: PathsConfig = PathsConfig(),
-    val discord: DiscordConfig = DiscordConfig()
+    val discord: DiscordConfig = DiscordConfig(),
+    val redis: RedisConfig = RedisConfig()
 )
 
 @Serializable
@@ -26,19 +27,27 @@ data class PathsConfig(
 )
 @Serializable
 data class DiscordConfig(
-    @SerialName("discord_Token")
+    @SerialName("token")
     val discordToken: String = "put your bot token here",
 
-    @SerialName("discord_guildID")
+    @SerialName("guildID")
     val guildID: String = "put your guild id here",
 
-    @SerialName("discord_description")
+    @SerialName("description")
     val description: String = "<nil>",
 
-    @SerialName("discord_title")
+    @SerialName("title")
     val title: String = "Alert",
 
-    @SerialName("discord_color")
+    @SerialName("color")
     val color: Int = 0xeb34b7
 )
 
+@Serializable
+data class RedisConfig(
+    @SerialName("address")
+    val address: String = "localhost",
+
+    @SerialName("port")
+    val port: String = "6379"
+)
