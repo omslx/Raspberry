@@ -17,7 +17,6 @@ fun alert(
     val title = config.discord.title
     val description = config.discord.description
     val color = config.discord.color
-    val channelId = guildID
     try {
         val jda = JDABuilder.createDefault(botToken).build()
         jda.awaitReady()
@@ -35,11 +34,11 @@ fun alert(
             setFooter("Raspberry Core")
         }.build()
 
-        val channel = jda.getTextChannelById(channelId)
+        val channel = jda.getTextChannelById(guildID)
         if (channel != null) {
             channel.sendMessageEmbeds(embed).complete()
         } else {
-            logger("Channel not found with ID: $channelId", error = true)
+            logger("Channel not found with ID: $guildID", error = true)
         }
 
         jda.shutdown()
