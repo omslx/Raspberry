@@ -1,13 +1,14 @@
-package ir.nayragames.Managers
+package managers
 
-import ir.nayragames.Utils.PaperUtils
-import ir.nayragames.Utils.createDirectory
-import ir.nayragames.Utils.logger
+import utils.PaperUtils
+import utils.createDirectory
+import utils.logger
 import org.json.JSONObject
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
+import kotlin.collections.iterator
 
 fun downloadManager() {
     val config = ConfigManager.loadConfig()

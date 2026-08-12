@@ -1,7 +1,6 @@
 package managers
 
-import ir.nayragames.Managers.ConfigManager
-import ir.nayragames.Utils.logger
+import utils.logger
 import redis.RedisPublisher
 import redis.RedisSubscriber
 import redis.clients.jedis.Jedis

@@ -1,10 +1,10 @@
-package ir.nayragames.Managers
+package managers
 
 import com.akuleshov7.ktoml.Toml
 import config.AppConfig
 import config.saveDefaultConfig
-import ir.nayragames.Utils.createDirectory
-import ir.nayragames.Utils.logger
+import utils.createDirectory
+import utils.logger
 import kotlinx.serialization.decodeFromString
 
 object ConfigManager {

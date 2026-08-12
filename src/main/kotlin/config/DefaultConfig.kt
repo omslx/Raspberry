@@ -1,6 +1,6 @@
 package config
 
-import ir.nayragames.Managers.ConfigManager.configFile
+import managers.ConfigManager.configFile
 
 fun saveDefaultConfig() {
     val defaultConfigText = """

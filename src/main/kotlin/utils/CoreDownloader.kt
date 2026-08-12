@@ -1,4 +1,4 @@
-package ir.nayragames.Utils
+package utils
 
 import java.net.URI
 import java.net.http.HttpClient

@@ -1,6 +1,6 @@
 package redis
 
-import ir.nayragames.Utils.logger
+import utils.logger
 import redis.clients.jedis.Jedis
 
 class RedisPublisher(

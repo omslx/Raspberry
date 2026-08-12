@@ -1,8 +1,8 @@
-package ir.nayragames.Discord
+package discord
 
-import ir.nayragames.Managers.ConfigManager
+import managers.ConfigManager
 import ir.nayragames.Utils.Stats
-import ir.nayragames.Utils.logger
+import utils.logger
 import net.dv8tion.jda.api.EmbedBuilder
 import net.dv8tion.jda.api.JDABuilder
 import java.awt.Color
