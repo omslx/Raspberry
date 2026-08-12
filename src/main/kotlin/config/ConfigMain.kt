@@ -49,5 +49,8 @@ data class RedisConfig(
     val address: String = "localhost",
 
     @SerialName("port")
-    val port: String = "6379"
+    val port: Int = 6379,
+
+    @SerialName("channel")
+    val channel: String = "raspberry"
 )

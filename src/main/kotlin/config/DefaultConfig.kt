@@ -22,8 +22,9 @@ fun saveDefaultConfig() {
             
             [redis]
             address = "localhost"
-            port = "6379"
+            port = 6379
     ##        password = ""  // not work rn
+            channel = "raspberry"
             
         """.trimIndent()
 
