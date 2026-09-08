@@ -1,4 +1,4 @@
-// NOT USED — alert() هیچ‌جا صدا زده نمی‌شود
+// NOT USED — alert() د
 package discord
 
 import managers.ConfigManager
