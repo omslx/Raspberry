@@ -44,7 +44,7 @@ It is one half of a larger system: the control plane (web panel and the `luminou
 | **Isolation** | Incus containers, `security.idmap.isolated`, never privileged |
 | **Server software** | Paper, Purpur, Vanilla, Fabric, Forge |
 | **State** | Plain files: `./servers`, `./state/ports.json`, `./versions`, `./cache`, `./backups` |
-| **License** | GPL-3.0 |
+| **License** | GNU GPL v3 |
 
 <img src="assets/divider.svg" width="100%" alt=""/>
 
