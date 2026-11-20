@@ -1,0 +1,27 @@
+name: Update README tree
+
+on:
+  push:
+    branches: [master]
+    paths-ignore: ["README.md"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tree:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate project tree
+        run: python3 .github/scripts/update_tree.py
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet README.md; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "docs: refresh project tree [skip ci]"
+            git push
+          fi
