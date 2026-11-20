@@ -339,6 +339,14 @@ This block is regenerated automatically on every push by [`update_tree.py`](.git
 <!-- TREE:START -->
 ```text
 Raspberry/                                 # Repository root
+├── assets/
+│   ├── banner.svg
+│   ├── divider.svg
+│   ├── mascot-coding.svg
+│   ├── mascot-hello.svg
+│   ├── mascot-ok.svg
+│   ├── mascot-server.svg
+│   └── mascot-sleep.svg
 ├── cache/                                 # Shared vanilla-jar cache (see CACHE.md)
 ├── src/
 │   ├── main/
@@ -400,6 +408,7 @@ Raspberry/                                 # Repository root
 ├── CACHE.md                               # How the shared server-jar cache works
 ├── gradle.properties                      # Gradle properties
 ├── LICENSE                                # GPL-3.0
+├── README.md
 └── settings.gradle.kts                    # Project name + toolchain resolver
 ```
 <!-- TREE:END -->
